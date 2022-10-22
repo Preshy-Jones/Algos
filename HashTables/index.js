@@ -3,11 +3,11 @@ const hashStringToInt = (key, tableSize) => {
   for (let i = 0; i < key.length; i++) {
     hash = (13 * hash * key.charCodeAt(i)) % tableSize;
   }
+  console.log(hash);
   return hash;
 };
 
 class HashTable {
-
   table = new Array(100);
   numItems = 0;
 
@@ -25,7 +25,7 @@ class HashTable {
         });
       }
     });
-    this.table = newTable; 
+    this.table = newTable;
   };
   hashStringToInt(s, tableSize) {}
 
@@ -41,18 +41,25 @@ class HashTable {
     } else {
       this.table[index] = [[key, value]];
     }
-    
   }
   getItem = (key) => {
     const index = this.hashStringToInt(key, this.table.length);
     if (!this.table[index]) {
       return null;
     }
-    return this.table[index].find(x => x[0] === key)[1];
+    return this.table[index].find((x) => x[0] === key)[1];
   };
 }
 
 const myTable = new HashTable();
-myTable.setItem('firstName', 'Bob');
-myTable.setItem('lastName', 'Smith');
-console.log(myTable.getItem("firstName"));
+myTable.setItem(14, "Bob");
+myTable.setItem("lastName", "Smith");
+console.log(myTable.getItem(14));
+
+let bola;
+let tableSize = 10;
+const gh = 33;
+for (let i = 0; i < gh.length; i++) {
+  bola = (13 * bola * gh.charCodeAt(i)) % tableSize;
+}
+console.log(bola);
