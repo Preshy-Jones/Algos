@@ -1,0 +1,10 @@
+we create 3 arrays, each for the prefix,suffix and output result respectively
+
+The prefix array stores the product of all the elements to the left of the current element. The suffix array stores the product of all the elements to the right of the current element. The output array stores the product of all the elements to the left and right of the current element.
+
+To compute the prefix array, we initialize the first element to 1 since there is no element to the left of it, this is because the product of the array except the first element is always the product of all elements to the right, so the best imaginary or virtual number number we can attribute to the left is 1 because any other value(0 or >1 or <1) will affect the product of the elements to the right. Since we already have the value of the first element in the prefix array, we then iterate over the input array starting from the i=1(the second element) and compute the prefix of each element by multiplying the previous element in the prefix array with the previous element before the current element in the input array. This is done until we reach the last element in the input array.
+
+To compute the suffix array, we initialize the last element to 1 since there is no element to the right of it, this is because the product of the array except the last element is always the product of all elements to the left, so the best imaginary or virtual number number we can attribute to the right is 1 because any other value(0 or >1 or <1) will affect the product of the elements to the left. Since we already have the value of the last element in the suffix array, we then iterate over the input array starting from the i=n-2(the second to the last element) and compute the suffix of each element by multiplying the next element in the suffix array with the next element after the current element in the input array. This is done until we reach the first element in the input array.
+
+
+To compute the output array, we iterate over the input array and compute the product of the prefix and suffix of the current index and store it in the output array.
