@@ -33,6 +33,7 @@ queue.enqueue("John");
 queue.enqueue("Jack");
 
 queue.enqueue("Camila");
+console.log(queue.peek());
 
 queue.print();
 
@@ -43,6 +44,7 @@ console.log(queue.isEmpty());
 queue.dequeue();
 
 queue.dequeue();
+
 
 queue.print();
 

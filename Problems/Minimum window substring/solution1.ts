@@ -23,7 +23,7 @@ var minWindow = function (s, t) {
   let need = Object.keys(tCountMapping).length;
 
   var result = [-1, -1];
-  var resultLength = Number.MAX_VALUE;
+  var resultLength = Number.POSITIVE_INFINITY;
 
   let windowStart = 0;
   for (var windowEnd = 0; windowEnd < s.length; windowEnd++) {
@@ -31,6 +31,7 @@ var minWindow = function (s, t) {
 
     window[currentChar] = 1 + (window[currentChar] || 0);
 
+    // if the current char is in the tCountMapping and the count of the current char in the window satisfies the number of characters needed in the tCountMapping then we increment the have by 1
     if (
       currentChar in tCountMapping &&
       window[currentChar] === tCountMapping[currentChar]
@@ -60,7 +61,7 @@ var minWindow = function (s, t) {
 
   console.log(result);
 
-  if (resultLength !== Number.MAX_VALUE) {
+  if (resultLength !== Number.POSITIVE_INFINITY) {
     return s.slice(result[0], result[1] + 1);
   } else {
     return "";
