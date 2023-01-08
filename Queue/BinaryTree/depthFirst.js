@@ -12,6 +12,7 @@ const depthFirstValues = (root) => {
 
   const result = [];
   while (stack.length > 0) {
+    //updating result
     const current = stack.pop();
     console.log(current.val);
     result.push(current.val);
