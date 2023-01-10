@@ -1,0 +1,1 @@
+to perform a bubble sort the array is iterated, during this iteration, a comparison is done between the current number in the loop and the next one after it, if the current number is greater than the next one, then the two numbers are swapped, this loop is done over and over again until the array is sorted.
