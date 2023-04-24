@@ -28,4 +28,4 @@ var swap = (i: number, j: number, arr: number[]) => {
   [arr[i], arr[j]] = [arr[j], arr[i]];
 };
 
-console.log(selectionSort(arr2));
+console.log(selectionSort(arr2)); 
