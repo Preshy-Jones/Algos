@@ -1,5 +1,3 @@
-
-
 //O(n) space O(n) time where n is the lenght of the input string
 function runLengthEncoding(string) {
   // Write your code here.
@@ -47,7 +45,6 @@ function runLengthEncoding2(string) {
   return resultArr.join("");
 }
 
-
 function runLengthEncoding3(string) {
   // Write your code here.
 
@@ -58,7 +55,7 @@ function runLengthEncoding3(string) {
       resultArr.push(length, string[i - 1]);
       length = 0;
     }
-    length++
+    length++;
   }
 
   resultArr.push(length, string[string.length - 1]);
