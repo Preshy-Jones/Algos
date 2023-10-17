@@ -72,3 +72,9 @@ console.log(depthFirstValuesRecursion2(a));
 // d e   f
 
 console.log(["d", ...[], ...[]]);
+
+const arr = [3, 4, 4, 4, 4];
+
+for (let item of arr) {
+  console.log(item);
+}

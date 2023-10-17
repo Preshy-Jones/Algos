@@ -4,14 +4,14 @@ function commonCharacters(strings) {
   const characterCount = new Map();
 
   for (let char of strings) {
-    console.log(char);
+    // console.log(char);
     let charSet = new Set(char.split(""));
     console.log(charSet);
     for (let char of charSet) {
       characterCount.set(char, 1 + (characterCount.get(char) || 0));
     }
   }
-  console.log(characterCount);
+ // console.log(characterCount);
   let result = [];
   characterCount.forEach((value, key) => {
     console.log(value, key);
@@ -113,5 +113,10 @@ console.log(arr);
 let testMap = new Map();
 testMap.set("a", 1);
 console.log(testMap);
-testMap.set("a", 2);
+testMap.set("addfgfggf", 2);
 console.log(testMap.get("b"));
+
+console.log(testMap.entries());
+
+
+

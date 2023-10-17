@@ -109,3 +109,14 @@ let blah = 13;
 console.log(blah % 1);
 
 console.log(bolu.slice(3));
+
+
+
+const blahj = new Set();
+blahj.add("blah");
+blahj.add("blah");
+
+// loop through blahj
+for (let item of blahj) {
+  console.log(item);
+}
